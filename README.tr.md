@@ -1,10 +1,11 @@
 # bankbot-mazain
 
-In recent years we've struggled against different types of malware that targeting [Turkish banking](https://github.com/bemre/bankalarbirligi) and [financial institution's apps](https://github.com/bemre/mobil_sube.apk). It has been observed that malicious banking applications have increased over the last two years. Especially on the mobile side, many new types of malicious software has spread via phishing, smishing etc. 
+Son yıllarda [Türk bankacılığı] (https://github.com/bemre/bankalarbirligi) ve [finansal uygulamalarını] (https://github.com/bemre/mobil_sube.apk) hedefleyen farklı malware türlerine karşı mücadele verdik. 
+Özellikle son iki yıl içerisinde bankacılık uygulamalarını hedef alan zararlı yazılımların arttığını gözlemleyebilmekteyiz. Yeni tipteki bu zararlı mobil bankacılık uygulamalarının oltalama ve SMS yoluyla gelen mesajlar ile yayıldığı görülmektedir.
 
-As the spread of Zeus botnet's source code, Bankbot or Maza-in bot and C&C source code is also open sourced and different variants of this bots are spread in underground portals. Entire code of the Android application, as well as the complete C&C panel in PHP is  available in different forums
+Zeus Botnet'inin kaynak kodlarının herkese açılması gibi Bankbot ya da Mazain adı verilen zararlı yazılımın komuta kontröl ve istemcisinin de kaynak kodlarının çeşitli forumlarda ve web sitelerinde yayılması, bankbot'un ve türevlerinin hızlıca çoğalmasına sebep olmuştur. Android cihazları hedef alan bu yazılımın ve PHP ile geliştirilen C&C sunucusuna ait Panel çeşitli sitelerde görülebilmektedir.
 
-Some of them:
+Bunlardan bazıları:
 - hxxp://nora.biz/index.php?threads/Пишем-android-бота-с-нуля.1425/
 
 ![nora-biz](https://i.imgur.com/2fSvySQ.jpg)
@@ -15,47 +16,49 @@ hxxps://forum.exploit.in/index.php?s=52f9e19ea5173f0ea43855edabafff41&showtopic=
 hxxp://a0007517.xsph.ru/threads/pishem-svoj-android-botnet-s-nulja.6/ 
 ![Darklub](https://i.imgur.com/YZWYpD8.jpg)
 
-the software that used in C&C servers has small PHP code. C&C  portal is managing android bots via commands. And it is stealing SMS messages to get OTP.
+Zararlı yazılımın komuta merkezi küçük bir koda sahip ve bu kod ile kendisine bağlanacak android bot'ların yönetilmesini sağlamaktadır. özellikle bankacılık uygulamaların olmazsa olmazı olan OTP mesajlarının elde etmek için kurbanların SMS içerikleri panel vasıtasıyla çalınmaktadır.
 
 ![Botnet C&C Source Code](https://i.imgur.com/2TB4KGJ.png)
 
-This C&C server basically add bots to panel and catch SMS messages from android phones.
-There are lots of active C&C servers in the wild
+Halihazırda oldukça fazla C&C sunucusu aktif olarak çalıştığı görülmektedir.
 
 ![screenshot of C&C server](https://i.imgur.com/LCG2uhs.jpg)
 
-Almost all C&C servers are served on domain with .gdn TLD  https://en.wikipedia.org/wiki/.gdn & some of them are  served on domain with .pw TLD
+C&C sunucusu olarak hizmet veren sunucuları büyük bir çoğunluğu [.gdn TLD](https://en.wikipedia.org/wiki/.gdn) & geri kalanı ise [.pw TLD](https://en.wikipedia.org/wiki/.gdn) üzerinde hizmet vermektedir.
 ![other domains of C&C domain owner](https://i.imgur.com/BV2KEj4.png)
 
- Observed domains are:
+C&C sunucusu olarak kullanılan domainler:
  - ifc3yb3rs3cur1tych0.pw
  - 1nj3ct10n.gdn 
  - r0n4ld4.gdn
  - t4l1sc4.gdn 
  - trolitrader.pw
  - bigbustown.pw
+ - ch4pr6.gdn
  - n0309.gdn
  - tr4f0.pw
  - t1lk1.gdn
  - b46.gdn
  - ...
- this list will be updated after other domains has found
+ Bu liste diğer domainlerin de eklenmesiyle güncellenecektir.
  
-The person who owns these domains has previously used different domains as serving phishing sites and C&C servers.
+Domain'lerin sahibi olan kişi aynı zamanda değişik zamanlarda farklı tipteki oltalama saldırıları için kullanılan domain'lere de sahip olan kişi olarak öne çıkmaktadır.
+
+Bu domainler ise:
  - hxxp://e-trafikcezasiodemesi.net
  - hxxp://guvenliktrafikcezasiodemeyeri.com
  - hxxp://jethgsyukle.com  
   
   ![enter image description here](https://i.imgur.com/TYRH3iW.png)
 
-old ones are:
+Daha önceleri kullanılan domainlerden bazıları:
 ![C&C servers search engine result](https://i.imgur.com/z1DYYC0.png) 
 
 ![C&C server google cache](https://i.imgur.com/ttZXQi0.png)
 
 ![C&C server google cache](https://i.imgur.com/4F01ycp.png)
 
-When you visited the following Turkish sites with mobile devices, the site helped spread mentioned android bot.
+Aşağıda belirtilen siteleri android cihaz ile ziyaret ettiğiniz vakit bahsedilen bankbot zararlı yazılımın yüklenmesi için sizi ayrı bir siteye yönlendirmektedir..
 
  - hxxp://ircforumlari.net
  - hxxp://filmindirsene.net
@@ -64,14 +67,16 @@ When you visited the following Turkish sites with mobile devices, the site helpe
 
 ![FilmIndirsene](https://i.imgur.com/msw9FsV.png)
 
-If you visit sites mentioned above with mobile devices or browser with the user-agent strings set as one of the android browsers, site offers to install android application via shortened link. 
+Bu siteleri android üzerinde kullanılabilen bir tarayıcıya ait bilgileri kullanarak ya da android cihazlar ile ziyaret ettiğiniz vakit kısa link ile belirtilen ve zararlı yazılımı kurulması için talimat veren bir sayfa karşımıza çıkmaktadır.
 
-***You need to install Flash Player for Android  from the link below so you can visit the site.***
+***Devam edebilmek için Android Flash Player gerekiyor.***
 
 ![FilmIndirseneSource](https://i.imgur.com/FFoc9Mc.png)
-hxxp://dogrulama.link  site which is serving URL shortening service is hosting fake flash player application. 
 
-SHA256 hashes of FlashPlayer.apk and its variants.
+- hxxp://dogrulama.link  
+Bu site URL kısaltma servisi olarak kullanılmakta hem de sahte Flash Player uygulmasını üzerinde barındırmaktadır.
+
+Sitede bulunan sahte FlashPlayer.apk dosyası ve internet üzerinde bulunan diğer bankbot zararlısına ait SHA256 hash bilgileri şu şekildedir:
 - 62ca7b73563f946df01d65447694874c45d432583f265fad11b8645903b6b099
 - 3bf02ae481375452b34a6bd1cdc9777cabe28a5e7979e3c0bdaab5026dd8231d
 - 6b93f837286da072f1ec7d5f5e049491d76d4d6ecc1784e1fadc1b29f4853a13
@@ -79,51 +84,54 @@ SHA256 hashes of FlashPlayer.apk and its variants.
 - bd194432a12c35ae6ae8a82fa18f9ecac3eb6e90c5ff8330d20d19e85a782958
 - e0da58da1884d22cc4f6dfdc2e1da6c6bfe2b90194b86f57f9fc01b411abe8de 
 
-It seems that some of the class names are written in Turkish. 
+Kaynak kodlardan görülebildiği üzere bazı sınıf isimleri ve hata ayıklama mesajları Türkçe olarak yazılmıştır:
 ![Decompiled APK](https://i.imgur.com/6Gc60Pq.png)
 
-and some also Russian (original ones are already found on the Russian forums).
+Ayrıca bazı Rusça ifadeler de yer almaktadır.Zararlının orijinalinin rus forumlarında duyurulduğu yukarıdaki ekran görüntülerinden de görülebilmektedir.
 
 ![enter image description here](https://i.imgur.com/pnXFZkr.png)
 ПРОВЕРКА! & Запрос USSD выполнен
 
-After installing the flashplayer.apk to phone the malware asks the user to give the device admin privileges for the first time.
+sahtep flashplayer.apk uygulaması android cihaza yüklendikten sonra ilk olarak kullanıcıdan admin haklarına sahip olmak istediğini belirtir bir mesaj göstermektedir.
 
 ![Device Admin Privileges](https://i.imgur.com/w8EHlMk.png)
 ![Device Admin](https://i.imgur.com/U1FX4MJ.png)
 
+Böylece zararlı, komuta sunucusundan gerekli komutları beklemek üzere arka planda çalışmaktadır.
 
-the other permissions that malware want to use are:
+Zararlının ihtiyaç duyduğu diğer izinler:
 ![permissions](https://i.imgur.com/vDk9PUP.png)
 ![enter image description here](https://i.imgur.com/XZlGGdM.png)
 
 
-Malware has some services to run.
+Zararlının çalıştırdığı android servisleri
 ![enter image description here](https://i.imgur.com/8HenZbg.png)
 
-The Trojan can receive the following commands from the C&C:
+BankBot zararlısı C&C vasıtasıyla android cihaz üzerinden aşağıdaki işlemleri gerçekleştirmektedir:
 
 ![enter image description here](https://i.imgur.com/7uKtLYH.png)
 
-- Unstructured Supplementary Service Data request
+- Hücresel Bilgi yayını mesajlarını elde etme
 ![enter image description here](https://i.imgur.com/zY7086o.png)
 
-- Request Admin/Root Privileges
+- Cihaz üzerinde Yöneticii Hakkını elde etme
 ![enter image description here](https://i.imgur.com/VPqTlY6.png)
 
-- Send SMS
+- SMS Gönderme
 ![Send SMS](https://i.imgur.com/yXnn5pk.png)
 
-
-Malware scans all running process defined in statham class.
+Zararlı yazılım statham sınıfı ile sistem üzerinde çalışan uygulama listesini almaktadır.
 ![getting running process list](https://i.imgur.com/kNUNYZZ.png)
 
 ![enter image description here](https://i.imgur.com/lCKUE2F.png)
 
-After it has received the all running process list, It Compares to its own list of mobile banking applications.
+Bankbot, android üzerinde çalışan uygulama listesini elde ettikten sonra bunu kaynak kod içerisinde bulunan liste ile karşılaştırmaktadır.
+
 ![enter image description here](https://i.imgur.com/Omfr7Dc.png)
 
-Almost all of the Turkish Mobile Banking and Financial applications  are affected by BankBot malware right now:
+Neredeyse tüm Türk mobil bankacılık uygulamaları bankbot zararlı yazılımından nasibini almaktadır.
+
+İlgili uygulamalar:
  - com.ziraat.ziraatmobil
  - com.ziraat.ziraattablet
  - com.tmobtech.halkbank
@@ -151,11 +159,11 @@ Almost all of the Turkish Mobile Banking and Financial applications  are affecte
  - com.kuveytturk.mobil
 
 
-And also The phone numbers in the source code are blocked by Bankbot. 
+Kaynak koddan gözlemleyebildiğimiz kadarıyla bazı telefon numaraları bloklanmaktadır.
 
     Toast.makeText((Context)context, (CharSequence)"Giden Aramalar Engellendi.", (int)0).show();
 
-Each of these phone numbers is used to access the related bank's phone banking system.
+Kaynak kodda bulunan bu numaralar ilgili bankaların telefon bankacılık sistemine erişim için kullanılan numalaralarıdır.
 
     this.b = arrayList.getStringExtra("incoming_number");
 
@@ -267,15 +275,14 @@ Each of these phone numbers is used to access the related bank's phone banking s
 - arrayList.add("02123541111");
 - arrayList.add("2123541111");
 
-The person who developed the malware is likely to be a bit lazy or have little experience in programming.
-Various sources on Internet shows that same string used for intercept/blocking outgoing calls.
+Zararlı yazılımı geliştiren kişinin ya yazılım bilgisinin çok iyi olmaması ya da biraz tembel olduğunu Google aramalarından da çıkabilen şu kod ile görebiliriz.
+Birçok kaynakta gözüktüğü üzere telefon aramayı durdurma ya da dinleme için kullanılan kodun aynısı yazılımın içerisinde de birebir kullanılmıştır.
 ![callblocking](https://i.imgur.com/Qof4Got.png)
 
-Also C&C server has special login pages for getting credentials from user.
+Zararlı yazılım ayrıca android kullanıcısından internet bankacılığında kullanılan Hesap/Parola bilgisini elde edebilmek için ilgili bankalar için oluşturulan sahte giriş sayfası hazırlamıştır..
 ![enter image description here](https://i.imgur.com/7nsoRrT.png)
 
-display phishing window WebView with content downloaded from the link specified in a command.
+Kullanıcıyı oltalama sayfasına yönlendirmek için kullanılan kod parçacığı:
 ![credentialgrab](https://i.imgur.com/olqYTVc.png)
 
-
-We are likely to face many cases this year with the spread of open source malicious mobile banking application.
+Bankbot zararlısının ve kontrol panelinin kodunun açık olması önümüzdeki günlerde yine birçok kullanıcının hedef alınacağı sonucu bize göstermektedir.
