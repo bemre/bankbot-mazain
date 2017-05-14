@@ -1,6 +1,6 @@
 # bankbot-mazain
 
-Son yıllarda [Türk bankacılığı] (https://github.com/bemre/bankalarbirligi) ve [finansal uygulamalarını] (https://github.com/bemre/mobil_sube.apk) hedefleyen farklı malware türlerine karşı mücadele verdik. 
+Son yıllarda [Türk bankacılığı](https://github.com/bemre/bankalarbirligi) ve [finansal uygulamalarını](https://github.com/bemre/mobil_sube.apk) hedefleyen farklı malware türlerine karşı mücadele verdik. 
 Özellikle son iki yıl içerisinde bankacılık uygulamalarını hedef alan zararlı yazılımların arttığını gözlemleyebilmekteyiz. Yeni tipteki bu zararlı mobil bankacılık uygulamalarının oltalama ve SMS yoluyla gelen mesajlar ile yayıldığı görülmektedir.
 
 Zeus Botnet'inin kaynak kodlarının herkese açılması gibi Bankbot ya da Mazain adı verilen zararlı yazılımın komuta kontröl ve istemcisinin de kaynak kodlarının çeşitli forumlarda ve web sitelerinde yayılması, bankbot'un ve türevlerinin hızlıca çoğalmasına sebep olmuştur. Android cihazları hedef alan bu yazılımın ve PHP ile geliştirilen C&C sunucusuna ait Panel çeşitli sitelerde görülebilmektedir.
