@@ -34,6 +34,7 @@ Almost all C&C servers are served on domain with .gdn TLD  https://en.wikipedia.
  - t4l1sc4.gdn 
  - trolitrader.pw
  - bigbustown.pw
+ - ch4pr6.gdn
  - n0309.gdn
  - tr4f0.pw
  - t1lk1.gdn
